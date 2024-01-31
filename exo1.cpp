@@ -43,12 +43,13 @@ int main()
     constexpr int tailleMinNomVille = 4;
     constexpr int tailleMaxNomVille = 12;
     constexpr int grainePourLeRand = 1;
-    constexpr int nombreDeVilles = 4;
+    constexpr int nombreDeVilles = 5;
     constexpr int nombreCombinaisons = 24;
     constexpr int tailleCoteCarte = 100;
+    int nbVilles = 5;
 
-    vector<string> vecteurDeNomsDeVille{"Lille", "Vda"};
-    ToutesLesPermutations(vecteurDeNomsDeVille, 0, vecteurDeNomsDeVille.size() - 1);
+    vector<string> vecteurDeNomsDeVille;
+    vector<tuple<int, int, int>> localisations;
 
     for (int i = 0; i < nombreDeVilles; i++)
     {
@@ -60,14 +61,19 @@ int main()
             if (j == 0)
             {
                 lettre = toupper(lettre);
-                nomVille += lettre;
             }
-            vecteurDeNomsDeVille.push_back(nomVille);
+            nomVille += lettre;
         }
+        vecteurDeNomsDeVille.push_back(nomVille);
+        int X = rand() % tailleCoteCarte;
+        int Y = rand() % tailleCoteCarte;
+        auto monTuple = make_tuple(i, X, Y);
+        localisations.push_back(monTuple);
     }
-    for (const auto &nomVille : vecteurDeNomsDeVille)
+
+    for (int i = 0; i < nbVilles; i++)
     {
-        cout << nomVille << endl;
+        cout << "Ville : " << vecteurDeNomsDeVille[i] << ", Localisation : (" << get<1>(localisations[i]) << ", " << get<2>(localisations[i]) << ")" << endl;
     }
 
     return 0;
