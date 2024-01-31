@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="C:\Users\Admin\Documents\TD-TP-semestre2\CIR2-semestre2-TD3\CIR2-semestre2-TD3\exo1.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\Admin\Documents\TD-TP-semestre2\CIR2-semestre2-TD3\CIR2-semestre2-TD3\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{474E7BD8-658C-3CE6-A229-6EBBDAC6ACBE}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

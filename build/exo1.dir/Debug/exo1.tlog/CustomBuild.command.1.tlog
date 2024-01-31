@@ -1,0 +1,10 @@
+^C:\USERS\ADMIN\DOCUMENTS\TD-TP-SEMESTRE2\CIR2-SEMESTRE2-TD3\CIR2-SEMESTRE2-TD3\CMAKELISTS.TXT
+setlocal
+"C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -SC:/Users/Admin/Documents/TD-TP-semestre2/CIR2-semestre2-TD3/CIR2-semestre2-TD3 -BC:/Users/Admin/Documents/TD-TP-semestre2/CIR2-semestre2-TD3/CIR2-semestre2-TD3/build --check-stamp-file C:/Users/Admin/Documents/TD-TP-semestre2/CIR2-semestre2-TD3/CIR2-semestre2-TD3/build/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
